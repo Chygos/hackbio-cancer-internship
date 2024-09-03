@@ -27,9 +27,9 @@ f. Functional annotation to identify the roles of differentially expressed gene
 
 # References
 
-1.      Khodadadian, A., Darzi, S., Haghi-Daredeh, S., Sadat Eshaghi, F., Babakhanzadeh, E., Mirabutalebi, S. H., & Nazari, M. (2020). Genomics and Transcriptomics: The Powerful Technologies in Precision Medicine. _International journal of general medicine_, **_13_**, 627–640. <https://doi.org/10.2147/IJGM.S249970>
+1. Khodadadian, A., Darzi, S., Haghi-Daredeh, S., Sadat Eshaghi, F., Babakhanzadeh, E., Mirabutalebi, S. H., & Nazari, M. (2020). Genomics and Transcriptomics: The Powerful Technologies in Precision Medicine. _International journal of general medicine_, **_13_**, 627–640. <https://doi.org/10.2147/IJGM.S249970>
 
-2.Wang, Z., Gerstein, M., & Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. _Nature reviews. Genetics_, **_10_**(1), 57–63. <https://doi.org/10.1038/nrg2484>
+2. Wang, Z., Gerstein, M., & Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. _Nature reviews. Genetics_, **_10_**(1), 57–63. <https://doi.org/10.1038/nrg2484>
 
 3. Strimbu, K., & Tavel, J. A. (2010). What are Biomarkers? _Current Opinion in HIV and AIDS_, _5_(6), 463. <https://doi.org/10.1097/COH.0b013e32833ed177>
 
