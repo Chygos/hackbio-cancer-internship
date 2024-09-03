@@ -10,31 +10,31 @@ To study the transcriptome in a healthy and diseased state, various techniques a
 
 To analyse transcriptomic data, various key steps are taken which include (6)
 
-a. Quality control to identify and remove low-quality genes
+a.   Quality control to identify and remove low-quality genes
 
-b. Read alignment to a reference genome or transcriptome
+b.   Read alignment to a reference genome or transcriptome
 
-c. Quantify expression levels by mapping the number of reads to each gene in reference genome or transcriptome to generate a counts
+c.   Quantify expression levels by mapping the number of reads to each gene in reference genome or transcriptome to generate a counts
 
-d. Normalisation to account for variations in sequencing depths and RNA composition
+d.   Normalisation to account for variations in sequencing depths and RNA composition
 
-e. Differential gene expression analysis to identify differentially expressed genes in diseased (cancer) and healthy states.
+e.   Differential gene expression analysis to identify differentially expressed genes in diseased (cancer) and healthy states.
 
-f. Functional annotation to identify the roles of differentially expressed genes in biological processes, molecular function and biochemical pathways.
+f.   Functional annotation to identify the roles of differentially expressed genes in biological processes, molecular function and biochemical pathways.
 
  
 
 
 # References
 
-1. Khodadadian, A., Darzi, S., Haghi-Daredeh, S., Sadat Eshaghi, F., Babakhanzadeh, E., Mirabutalebi, S. H., & Nazari, M. (2020). Genomics and Transcriptomics: The Powerful Technologies in Precision Medicine. _International journal of general medicine_, **_13_**, 627–640. <https://doi.org/10.2147/IJGM.S249970>
+1.   Khodadadian, A., Darzi, S., Haghi-Daredeh, S., Sadat Eshaghi, F., Babakhanzadeh, E., Mirabutalebi, S. H., & Nazari, M. (2020). Genomics and Transcriptomics: The Powerful Technologies in Precision Medicine. _International journal of general medicine_, **_13_**, 627–640. <https://doi.org/10.2147/IJGM.S249970>
 
-2. Wang, Z., Gerstein, M., & Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. _Nature reviews. Genetics_, **_10_**(1), 57–63. <https://doi.org/10.1038/nrg2484>
+2.   Wang, Z., Gerstein, M., & Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. _Nature reviews. Genetics_, **_10_**(1), 57–63. <https://doi.org/10.1038/nrg2484>
 
-3. Strimbu, K., & Tavel, J. A. (2010). What are Biomarkers? _Current Opinion in HIV and AIDS_, _5_(6), 463. <https://doi.org/10.1097/COH.0b013e32833ed177>
+3.   Strimbu, K., & Tavel, J. A. (2010). What are Biomarkers? _Current Opinion in HIV and AIDS_, _5_(6), 463. <https://doi.org/10.1097/COH.0b013e32833ed177>
 
-4. Supplitt, S., Karpinski, P., Sasiadek, M., & Laczmanska, I. (2021). Current Achievements and Applications of Transcriptomics in Personalized Cancer Medicine. _International Journal of Molecular Sciences_, **_22_**(3). <https://doi.org/10.3390/ijms22031422>
+4.   Supplitt, S., Karpinski, P., Sasiadek, M., & Laczmanska, I. (2021). Current Achievements and Applications of Transcriptomics in Personalized Cancer Medicine. _International Journal of Molecular Sciences_, **_22_**(3). <https://doi.org/10.3390/ijms22031422>
 
-5. Sheng, K.L., Kang, L., Pridham, K.J., Dunkenberger, L.E., Sheng, Z., & Varghese, R.T (2020)_._ An integrated approach to biomarker discovery reveals gene signatures highly predictive of cancer progression. _Sci Rep_ **10**, 21246. <https://doi.org/10.1038/s41598-020-78126-3>
+5.   Sheng, K.L., Kang, L., Pridham, K.J., Dunkenberger, L.E., Sheng, Z., & Varghese, R.T (2020)_._ An integrated approach to biomarker discovery reveals gene signatures highly predictive of cancer progression. _Sci Rep_ **10**, 21246. <https://doi.org/10.1038/s41598-020-78126-3>
 
-6. Lowe, R., Shirley, N., Bleackley, M., Dolan, S., & Shafee, T. (2017). Transcriptomics technologies. _PLoS computational biology_, **_13_**(5), e1005457. <https://doi.org/10.1371/journal.pcbi.1005457>
+6.   Lowe, R., Shirley, N., Bleackley, M., Dolan, S., & Shafee, T. (2017). Transcriptomics technologies. _PLoS computational biology_, **_13_**(5), e1005457. <https://doi.org/10.1371/journal.pcbi.1005457>
