@@ -1,4 +1,4 @@
-# Transcriptomics: Its benefit in biomarker discovery for cancer research
+# Transcriptomics: Its benefits in biomarker discovery for cancer research
 
 Transcriptomics is the study of the complete set of RNA transcripts (transcriptome) in a cell. The transcriptome of a living organism consists of the coding and non-coding regions which undergo an alternative splicing process to produce variant functional transcripts in the form of mRNA (messenger RNA) that are translated to a functional protein (1).
 
