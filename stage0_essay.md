@@ -1,25 +1,29 @@
 # Transcriptomics: Its benefits in biomarker discovery for cancer research
 
-## Introduction 
+## Introduction
+
 Transcriptomics is the study of the complete set of RNA transcripts (transcriptome) in a cell. The transcriptome of a living organism consists of the coding and non-coding regions which undergo an alternative splicing process to produce variant functional transcripts in the form of mRNA (messenger RNA) that are translated to a functional protein (1).
 
 On the other hand, the quantity of the transcriptome differs at each developmental stage or physiological state of the cell and the biological state or condition of the cell can be deduced by one or more measurable indicators (2). This indicator, called a biological marker or biomarker could exist as a biological compound, or a structure or be quantified by measuring the rate of biological processes happening at that biological state, whether in a diseased or healthy state (3).
 
 ## Role in biomarker discovery in cancer research
+
 Transcriptomics is one powerful tool used for biomarker discovery in cancer to identify biomarkers that can aid in the diagnosis, prognosis and treatment of cancer. For instance, breast cancer is one disease that affects women. Transcriptomics has enabled researchers to identify genes that are upregulated or downregulated in this diseased state at each developmental stage, their biological role in living organisms, the molecular function of proteins that are expressed by these genes as well as identify key biochemical pathways that can act as therapeutic/diagnostic targets in breast cancer (4, 5).
 
 ## Technologies and Techniques
-To study the transcriptome in a healthy and diseased state, various techniques and technologies, with their respective advantages and limitations, have been developed. They include microarrays which require RNA transcripts to hybridize to known DNA sequences. Currently, sophisticated methods include the sequencing of RNA transcript in a sample, RNAs in individual cells in a tissue (single-cell transcriptomics) or RNAs residing in tissue sections (spatial transcriptomics). These methods use the complementary DNAs (cDNAs) of these RNA transcripts (4).
 
-## Data preprocessing and analysis steps
+To study the transcriptome in a healthy and diseased state, various techniques and technologies, with their respective advantages and limitations, have been developed. They include microarrays which require RNA transcripts to hybridize to known DNA sequences. Currently, sophisticated methods include the sequencing of RNA transcripts in a sample, RNAs in individual cells in a tissue (single-cell transcriptomics) or RNAs residing in tissue sections (spatial transcriptomics). These methods use the complementary DNAs (cDNAs) of RNA transcripts (4).
+
+## Data preprocessing and analysis
+
 To analyse transcriptomic data, various key steps are taken which include (6)
 
-1. Quality control to identify and remove low-quality genes
-2. Read alignment to a reference genome or transcriptome
-3. Quantify expression levels by mapping the number of reads to each gene in reference genome or transcriptome to generate a counts
-4. Normalisation to account for variations in sequencing depths and RNA composition
-5. Differential gene expression analysis to identify differentially expressed genes in diseased (cancer) and healthy states.
-6. Functional annotation to identify the roles of differentially expressed genes in biological processes, molecular function and biochemical pathways.
+- Quality control to identify and remove low-quality genes.
+- Read alignment to a reference genome or transcriptome.
+- Quantify expression levels by mapping the number of reads to each gene in reference genome or transcriptome to generate expression counts data.
+- Normalisation to account for variations in sequencing depths and RNA composition.
+- Differential gene expression analysis to identify differentially expressed genes in diseased (cancer) and healthy states.
+- Functional annotation to identify the roles of differentially expressed genes in biological processes, molecular function and biochemical pathways.
 
 # References
 
