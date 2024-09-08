@@ -7,7 +7,7 @@
   }
   </style>
 
-<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"><img src="./imgs/article_image.png" width="624" height="217" class="center"></a>
+<p style=text-align:center><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"><img src="./imgs/article_image.png" width="624" height="217" class="center"></a></p>
 
 A review on Peng L, Bian XW, Li DK, Xu C, Wang GM, Xia QY, Xiong Q. Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types. Sci Rep. 2015 Aug 21;5:13413. doi: 10.1038/srep13413. 
 
