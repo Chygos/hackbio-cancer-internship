@@ -1,6 +1,6 @@
 **Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types**
 <div>
-<p style=text-align:center><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"><img src="./imgs/article_image.png" width="1000" height="217"></a></p>
+<p style=text-align:center><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"><img src="./imgs/article_image.png" width="800" height="217"></a></p>
 </div>
 
 [![](./imgs/article_image.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/)
