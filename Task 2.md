@@ -2,12 +2,10 @@
 
 [![](./imgs/article_image.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/)
 
-<div>
-  A review of L. Peng et al., “Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types,” *Sci Rep*, vol. 5, p. 13413, Aug. 2015, doi: 10.1038/srep13413 
-  <p>
-  Contributors: Pooja Solanki (@**poojasolanki2024)**, Alaa Hewela (@Alaa253), Chigozie Nkwocha (@**GozieNkwocha)** & Nourhan Saad (@**Nourhan-25)**   
-  </p>
-</div>
+Contributors: Pooja Solanki (@**poojasolanki2024)**, Alaa Hewela (@Alaa253), Chigozie Nkwocha (@**GozieNkwocha)** & Nourhan Saad (@**Nourhan-25)** 
+
+A review of L. Peng et al., “Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types,” *Sci Rep*, vol. 5, p. 13413, Aug. 2015, doi: 10.1038/srep13413 
+  
 
 ## Introduction 
 
@@ -21,8 +19,7 @@ This study aims to understand and characterize alterations in gene expressions a
 
 In this study, Peng et al analyzed and compared RNA-seq data from TCGA database containing 4043 cancer samples and 548 normal tissue samples across 12 cancer types at the gene and gene set levels.
 
-<img width="703" alt="Screenshot 2024-09-07 at 7 28 41 PM" src="https://github.com/user-attachments/assets/6259ee97-cfd5-4966-92e8-70c7e2f395ad">
-<img width="651" alt="Screenshot 2024-09-07 at 7 30 29 PM" src="https://github.com/user-attachments/assets/dfdae608-1ea2-4d09-ac46-a3560cd0b910">
+![](./imgs/methods_img.png)]
 
 
 ## Findings
