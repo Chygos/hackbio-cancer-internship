@@ -1,4 +1,8 @@
+
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"></img src="../imgs/article_image.png" width="624" height="217"</a>
+
 A review on Peng L, Bian XW, Li DK, Xu C, Wang GM, Xia QY, Xiong Q. Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types. Sci Rep. 2015 Aug 21;5:13413. doi: 10.1038/srep13413. 
+
 
 Contributors: Pooja Solanki (@**poojasolanki2024)**, Alaa Hewela (@Alaa253), Chigozie Nkwocha (@**GozieNkwocha)** & Nourhan Saad (@**Nourhan-25)**   
 
@@ -21,7 +25,7 @@ In this study, Peng et al analyzed and compared RNA-seq data from TCGA database 
 ## Findings
 
 * They identified differentially expressed (DE) genes and gene sets  
-* Some DE genes and gene sets are altered in all different cancer types while some are on one specific cancer type.  
+* Some DE genes and gene sets are altered in all cancer types while others are on one specific type.  
 * Seven cross-cancer gene signatures were differentially expressed in at least 4 cancer types.  
 * These gene signatures include genes with well-known roles in cancer and genes that could serve as potential new biomarkers for cancer.  
 * From pathway analysis and disease association analysis, differentially expressed genes were linked to specific biological pathways related to the cell cycle or interact with the cell cycle pathway. They were also linked to causing genetic disorders, developmental defects and cancer. These diseases include aneuploidy and other forms of cancer and diseases such as lung cancer, bone marrow, bladder, prostate and kidney.  
@@ -30,7 +34,7 @@ In this study, Peng et al analyzed and compared RNA-seq data from TCGA database 
 
 ## Conclusion
 
-From this study, the researchers unraveled organ/tissue-specific and cell cycle-related gene signatures that can cause cancer. Their findings add to existing knowledge by providing insights into the transcriptional processes of genes that can trigger tumor generation and metastasis. It also provides information on gene signatures that can be used for cancer diagnosis and treatment.
+From this study, the researchers unravelled organ/tissue-specific and cell cycle-related gene signatures that can cause cancer. Their findings add to existing knowledge by providing insights into the transcriptional processes of genes that can trigger tumour generation and metastasis. It also provides information on gene signatures that can be used for cancer diagnosis and treatment.
 
 ## Our Presentation: [https://www.linkedin.com/posts/alaa-hewela\_cancerresearch-bioinformatics-rnaseq-activity-7238220214310469632-Or55?utm\_source=share\&utm\_medium=member\_desktop](https://www.linkedin.com/posts/alaa-hewela_cancerresearch-bioinformatics-rnaseq-activity-7238220214310469632-Or55?utm_source=share&utm_medium=member_desktop)
 
