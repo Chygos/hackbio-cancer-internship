@@ -1,8 +1,7 @@
 # **Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types**
 
 [![](./imgs/article_image.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/)
-
-Contributors: Pooja Solanki (@**poojasolanki2024)**, Alaa Hewela (@Alaa253), Chigozie Nkwocha (@**GozieNkwocha)** & Nourhan Saad (@**Nourhan-25)** 
+ 
 
 A review of L. Peng et al., “Large-scale RNA-Seq Transcriptome Analysis of 4043 Cancers and 548 Normal Tissue Controls across 12 TCGA Cancer Types,” *Sci Rep*, vol. 5, p. 13413, Aug. 2015, doi: 10.1038/srep13413 
   
@@ -19,7 +18,7 @@ This study aims to understand and characterize alterations in gene expressions a
 
 In this study, Peng et al analyzed and compared RNA-seq data from TCGA database containing 4043 cancer samples and 548 normal tissue samples across 12 cancer types at the gene and gene set levels.
 
-![](./imgs/methods_img.png)]
+![methods schema](./imgs/methods_img.png)
 
 
 ## Findings
@@ -46,3 +45,12 @@ From this study, the researchers unravelled organ/tissue-specific and cell cycle
 \[2\] G. H. Williams and K. Stoeber, “The cell cycle and cancer,” The Journal of Pathology, vol. 226, no. 2, pp. 352–364, 2012, doi: 10.1002/path.3022.  
 \[3\] “The Cancer Genome Atlas Program (TCGA) \- NCI.” Accessed: Sep. 06, 2024\. \[Online\].  
 Available: https://www.cancer.gov/ccg/research/genome-sequencing/tcga 
+
+## Contributors
+
+Name             | Slack ID
+-----------------|------------------
+Pooja Solanki    | @poojasolanki2024
+Alaa Hewela      | @Alaa253
+Chigozie Nkwocha | @GozieNkwocha
+Nourhan Saad     | @Nourhan-25
