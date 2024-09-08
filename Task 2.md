@@ -1,9 +1,11 @@
-.center {
+<style>
+  .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+  }
+  </style>
 
 <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544034/"><img src="./imgs/article_image.png" width="624" height="217" class="center"></a>
 
