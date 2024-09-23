@@ -247,44 +247,6 @@ all_files
 ```
 
 
-```{r}
-# biological processes
-plot_lollipop_chart <- function(file_list, enrichment_type, gene_type, title=NULL){
-  filenames <- file_list[str_detect(file_list, enrichment_type)]
-  
-  if (length(filenames) == 0) stop(paste(
-    'enrichment type:', enrichment_type, 'file not found'), call.=F)
-  
-  gene_type_file <- filenames[str_detect(filenames, gene_type)]
-  
-  
-  read_csv(gene_type_file, show_col_types = F) |>
-  # filter by statistically significant result
-  filter(`Enrichment FDR` < 0.05) |>
-  slice_min(`Enrichment FDR`, n=5) |>
-  select(Pathway, everything()) |>
-  mutate(`Enrichment FDR` = -log10(`Enrichment FDR`)) |>
-  mutate(Pathway = str_to_title(
-    str_trim(str_remove_all(Pathway, 'GO:\\d+\\s|Path:\\Hsa\\d+')))) |>
-  ggplot(aes(x=`Enrichment FDR`, y=fct_reorder(Pathway, `Enrichment FDR`))) +
-    geom_segment(aes(x=0, xend=`Enrichment FDR`, y=Pathway, yend=Pathway, 
-                     color=`Fold Enrichment`), linewidth=1) +
-    geom_point(aes(size=nGenes), color='darkgray') +
-  theme_minimal() +
-  theme(panel.grid=element_blank(),
-        plot.title=element_text(face='bold'),
-        axis.text.y = element_text(size=9),
-        legend.title = element_text(size=9, face='bold'),
-        panel.background = element_rect(fill='white')) +
-  scale_color_gradient(low='blue', high='red') +
-  scale_size(range = c(4,6)) +
-  guides(color=guide_legend(title='Fold Enrichment'),scale='none') +
-  labs(title=title, 
-       subtitle = paste(gene_type, 'regulated genes'), y='', x=expression("-Log"[10]*" (pvalue)"))
-  
-}
-```
-
 
 ```{r}
 # biological processes

@@ -1,23 +1,11 @@
----
-title: "Machine Learning Model to predict normal and tumour samples"
-output:
-  pdf_document: default
-  html_notebook: default
----
 
-```{r}
 # install.packages(c('MLmetrics', 'matrixStats', 'kknn', 'glmnet'))
-```
 
-
-```{r}
 suppressPackageStartupMessages(library(tidyverse))
 suppressMessages(library(kknn))
 suppressPackageStartupMessages(library(glmnet))
-```
 
 
-```{r}
 # load preprocessed data
 counts_data <- read_csv('preprocessed_counts.csv', show_col_types = FALSE)
 counts_data <- counts_data |> column_to_rownames(var='...1')
@@ -25,34 +13,27 @@ counts_data <- counts_data |> column_to_rownames(var='...1')
 metadata <- read_csv('metadata.csv', show_col_types = F)
 
 dea_results <- read.csv('DEA_results_Tumor_vs_Normal.csv', row.names=1) 
-```
 
-```{r}
 head(counts_data)
-```
-```{r}
+
 dim(counts_data)
-```
 
-
-```{r}
+# clean variable names
 names(counts_data) <- gsub(x=names(counts_data), 
                            pattern = '\\.', 
                            replacement = '-')
-```
 
 
-## Data Visualisation
+## Visualise differential genes by tissue sample types
 
-```{r}
 # randomly selecting statistically significant genes with FDR < 1% & |logFC| > 2
 set.seed(10)
 selected_ids <- sample(1:nrow(filter(dea_results, FDR < 0.05, abs(logFC) > 2)), 25)
 selected_genes <- rownames(counts_data)[selected_ids]
 
-```
 
-```{r fig.height=9, fig.width=12}
+
+## ----fig.height=9, fig.width=12----------------------------------------------------------------------------------------------------------
 t(counts_data[selected_genes, ]) |>
   as.data.frame() |>
   rownames_to_column(var='ID') |>
@@ -71,9 +52,10 @@ t(counts_data[selected_genes, ]) |>
         strip.text = element_text(face='bold')) +
   labs(title= 'Gene expression levels of selected genes', x='Tissue Type', 
        y=expression('Expression Levels '*'(Log'[2]*')'))
-```
 
-```{r fig.height=6, fig.width=12}
+
+# plot gene expression level distribution in each sample
+## ----fig.height=6, fig.width=12----------------------------------------------------------------------------------------------------------
 counts_data |>
   rownames_to_column(var='ID') |>
   pivot_longer(cols=-ID, names_to = 'samples', values_to = 'exprs') |>
@@ -84,9 +66,9 @@ counts_data |>
   theme(panel.grid = element_blank(), 
         plot.title = element_text(face='bold')) +
   scale_x_discrete(labels=paste0('s', seq(1,40), sep=' '))
-```
 
-```{r}
+
+
 # summary statistics of genes (log2 expression values)
 counts_data |>
   rownames_to_column(var='ID') |>
@@ -98,27 +80,19 @@ counts_data |>
             .by = ID) |>
   arrange(desc(mean_val)) |>
   head(10)
-```
 
-## Preprocessing for ML
 
-### Feature Selection
-
-- Remove statistically not significant genes 
-
-```{r}
+## feature selection
+# remove not statistically significant genes
 remove_genes <- dea_results |>
   filter(FDR >= 0.05) |>
   rownames()
-```
 
-```{r}
 # droppping statistically insignificant genes
 counts_data <- counts_data[-which(remove_genes %in% rownames(counts_data)),]
-```
 
 
-```{r}
+# Data Preparation
 # transpose for ML (merging target class)
 prep_data <- t(counts_data) |>
   as.data.frame() |>
@@ -127,14 +101,12 @@ prep_data <- t(counts_data) |>
   mutate(group = factor(group), 
          group = relevel(group, ref='Normal')) |>
   column_to_rownames('sampleIDs')
-``` 
 
-```{r}
+
 length(remove_genes)
-```
 
 
-```{r}
+## Target class distribution
 ggplot(metadata, aes(group)) + 
   geom_bar(fill='firebrick', alpha=0.6) +
   theme_bw() +
@@ -142,10 +114,10 @@ ggplot(metadata, aes(group)) +
         plot.title = element_text(face='bold')) +
   labs(title='Target class distribution', x='Tumor type', y='Frequency') +
   scale_y_continuous(breaks=seq(0,40,5))
-```
 
 
-```{r}
+## Data splitting into train and test data
+
 # split into train and test data
 set.seed(20)
 
@@ -179,9 +151,9 @@ split_data <- function(df, p=0.75){
 }
 
 train_test_data <- split_data(prep_data)
-```
 
-```{r}
+
+## Get train and test data
 train_data <- train_test_data$train
 test_data <- train_test_data$test
 
@@ -189,15 +161,9 @@ xtrain <- train_data %>% select(-group)
 xtest <- test_data %>% select(-group)
 ytrain <- train_data$group
 ytest <- test_data$group
-```
 
-- Feature selection 2: We will fit a Lasso regression model to remove features that are shurnk to zero
 
-To do this, we will first transform the expression levels, normalise and fit a logistic regression model
-
-We will do this by creating a pipeline
-
-```{r}
+## Standardisation scaler preprocessor
 scale_preprocessor <- function(df_train, df_test=NULL){
   df_train_log <- log2(1+df_train)
   
@@ -218,54 +184,44 @@ scale_preprocessor <- function(df_train, df_test=NULL){
     return (as.data.frame(t(df_train_log)))
   }
 }
-```
 
-```{r}
+
 scaled_data <- scale_preprocessor(xtrain, xtest)
 
 scaled_train <- scaled_data[[1]]
 scaled_test <- scaled_data[[2]]
-```
 
 
-```{r}
 # check for genes with missing values as a result of scaling
 # 5 variables have missing values in them
 which(scaled_train |>
   apply(2, function(x) sum(is.na(x))) > 0)
-```
 
 
-```{r}
 remove_na_variables <- c("ENSG00000268799", "ENSG00000269138", 
                          "ENSG00000273177", "ENSG00000275508", 
                          "ENSG00000279273")
-```
 
-```{r}
 # remove genes with all missing values
 scaled_train <- select(scaled_train, -all_of(remove_na_variables))
 scaled_test <- select(scaled_test, -all_of(remove_na_variables))
-```
 
 
-
-```{r}
+## Feature selection using Lasso regression
 # fit a lasso logistic regression model
 # alpha = 1 (Lasso)
 lasso <- glmnet(as.matrix(scaled_train), ytrain, lambda =2e-7,
                 family=binomial, alpha=1, standardize = F)
-```
 
-```{r}
+
 # predictions on train
 lasso_probabilities <- predict(lasso, as.matrix(scaled_train), type = 'response')
 lasso_predictions <- factor(ifelse(lasso_probabilities > 0.5, 'Tumor', 'Normal'))
 lasso_predictions <- relevel(lasso_predictions, ref='Normal')
-```
 
 
-```{r fig.width=8}
+### Feature coefficients
+## ----fig.width=8-------------------------------------------------------------------------------------------------------------------------
 # select coefficients with non-zero values
 selected_features <- as.data.frame(as.matrix(coefficients(lasso))) |>
   arrange(s0) |>
@@ -284,24 +240,19 @@ selected_features %>%
   labs(title = 'Feature Coefficients', x='Odds Ratio', y='')
 
 ggsave('lasso_features.png', bg='white')
-```
 
 
-# Building a kNN model
-```{r}
+## Modelling
+s
 # kNN model
 knn_model <- train.kknn(group ~ ., data = cbind(
   select(scaled_train, all_of(selected_features$features)), 
   group=ytrain), kmax = 5)
 
-```
 
-
-```{r}
 knn_predictions <- predict(knn_model, scaled_test)
-```
 
-```{r}
+
 as.data.frame(table(Predictions=knn_predictions, Actual=ytest)) |>
   ggplot(aes(y=Actual, x=Predictions, fill=Freq)) +
   geom_tile(alpha=0.9) +
@@ -314,11 +265,13 @@ as.data.frame(table(Predictions=knn_predictions, Actual=ytest)) |>
   labs(title = 'Confustion Matrix', y='Actual', x='Predictions')
 
 ggsave('knn_conf_mat.png', bg='white')
-```
 
-```{r}
+
+## Function to get model performance metrics
+
 model_performance <- function(model, X, y){
   model_predictions <- predict(model, X)
+  
   acc <- mean(y == model_predictions)
   recall <- MLmetrics::Recall(y, model_predictions, positive = 'Tumor')
   f1 <- MLmetrics::F1_Score(y, model_predictions, positive = 'Tumor')
@@ -332,10 +285,5 @@ model_performance <- function(model, X, y){
 
 
 print(model_performance(knn_model, scaled_test, ytest))
-```
 
-
-```{r}
 print(model_performance(knn_model, scaled_train, ytrain))
-```
-
