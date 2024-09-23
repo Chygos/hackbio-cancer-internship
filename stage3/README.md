@@ -1,15 +1,6 @@
 
 # **Stage 3 Task**
 
->__Group Members__
-
->Chigozie Nkwocha\
->Chaima Ben Mohamed\
->Charlotte Chinwendu Iwuji\
->Igwebuike Oluchukwu Vivian\
->Opeyemi De Campos\
->Reem Atawia\
-
 ## **Overview**
 
 In this project, you will work as a team. Your objective is to identify potential cancer biomarkers from a given dataset using differential expression and machine learning models. This project will require creative thinking and collaboration, leveraging the strengths of both fields.
@@ -171,3 +162,13 @@ Precision	| 100
 ![confusion_matrix](imgs/knn_conf_mat.png)
 
 _**Fig 7**: Confusion Matrix (test set)_
+
+__Group Members__
+
+>- Chigozie Nkwocha\
+>- Chaima Ben Mohamed\
+>- Charlotte Chinwendu Iwuji\
+>- Igwebuike Oluchukwu Vivian\
+>- Opeyemi De Campos\
+>- Reem Atawia
+
