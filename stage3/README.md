@@ -2,12 +2,13 @@
 # **Stage 3 Task**
 
 >__Group Members__
->Chigozie Nkwocha
->Chaima Ben Mohamed
->Charlotte Chinwendu Iwuji
->Igwebuike Oluchukwu Vivian
->Opeyemi De Campos
->Reem Atawia
+
+>Chigozie Nkwocha\
+>Chaima Ben Mohamed\
+>Charlotte Chinwendu Iwuji\
+>Igwebuike Oluchukwu Vivian\
+>Opeyemi De Campos\
+>Reem Atawia\
 
 ## **Overview**
 
