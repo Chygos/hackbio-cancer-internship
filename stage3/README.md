@@ -49,7 +49,7 @@ Differential gene expression analysis was performed using the likelihood ratio m
 
 The image below shows a volcano plot of significantly and not significantly expressed genes 
 
-![volcano_plot](volcano.png)
+![volcano_plot](imgs/volcano.png)
 
 _**Fig 1**: Volcano plot showing upregulated, down regulated and not statistically significant genes_
 
@@ -60,12 +60,12 @@ After selecting the upregulated and downregulated genes, pathway enrichment anal
 
 From results, the cell-cycle pathway is highly enriched in the pathogenesis of cervical cancer. Most of the upregulated genes are directly involved in the cell cycle pathway, either as genes that are involved in the regulation of the mitotic or meiotic phase of cell division and differentiation. Other processes that are enriched are the muscular system and nervous system processes and other signalling pathways. Most of the downregulated genes are found to be invoved in striated muscle cell differentiation and muscle structure development, muscular contraction, negative regulation of heart rate an contraction, blood circulation or response to synaptic signalling.
 
-[!upregulated_biological_process](enrichment/upgene_bio_proc.png)
+![upregulated_biological_process](enrichment/upgene_bio_proc.png)
 
 _**Fig 2**: Biological Processes (Upregulated)_
 
 
-[!downregulated_biological_process](enrichment/downgene_bio_proc.png)
+![downregulated_biological_process](enrichment/downgene_bio_proc.png)
 
 _**Fig 3**: Biological Processes (downregulated)_
 
@@ -76,11 +76,11 @@ More info about enriched pathways for down and up regulated genes can be found [
 
 Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
 
-[!upregulated_molecular_function](enrichment/upgene_molec_func.png)
+![upregulated_molecular_function](enrichment/upgene_molec_func.png)
 
 _**Fig 4**: Molecular Function (Upregulated)_
 
-[!downregulated_molecular_function](enrichment/downgene_molec_func.png)
+![downregulated_molecular_function](enrichment/downgene_molec_func.png)
 
 _**Fig 5**: Molecular Function (Downregulated)_
 
@@ -130,7 +130,7 @@ __Feature selection__
 - After scaling, 5 genes with all samples in them having missing values were removed.
 - Lasso Logistic regression: Lasso regression was used to select important features. To do so a small penalty was applied shrinking the coefficients of some variables to exactly zero. Variables with non-zero coefficient values were selected for modelling. A total of 12 genes was selected (Figure 6).
 
-[!lasso_selected_features](lasso_features.png)
+![lasso_selected_features](imgs/lasso_features.png)
 
 _**Fig 6**: Lasso regression selected features with odds ratio and log odds (text)_
 
@@ -159,6 +159,6 @@ F1          | 100
 Specificity	| 100			
 Precision	| 100
 
-[!confusion_matrix](knn_conf_mat.png)
+![confusion_matrix](imgs/knn_conf_mat.png)
 
 _**Fig 7**: Confusion Matrix (test set)_
