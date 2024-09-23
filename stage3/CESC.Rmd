@@ -320,7 +320,8 @@ plot_lollipop_chart <- function(file_list, enrichment_type, gene_type,
   scale_size(range = c(4,6)) +
   guides(color=guide_legend(title='Fold Enrichment'),scale='none') +
   labs(title=title, 
-       subtitle = paste(gene_type, 'regulated genes'), y='', x=expression("-Log"[10]*" (pvalue)"))
+       subtitle = paste(gene_type, 'regulated genes'), y='', 
+       x=expression("-Log"[10]*" (pvalue)"))
   
 }
 ```
