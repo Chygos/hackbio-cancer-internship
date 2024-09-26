@@ -77,7 +77,7 @@ More info about enriched pathways for down and up regulated genes can be found [
 - Upregulated genes: Involved in processes such as cell division, mitotic regulation, and differentiation (Fig 4).
 - Downregulated genes: Associated with muscle development, contraction, and signaling pathways (Fig 5).
 
-Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
+Figure 4 and 5 show the molecular functions these gene products play in the human organism. Other molecular functions for [downregulated genes](enrichment/Down%20regulated%20enrichment%20GO%20Molecular%20function.csv) and [upregulated genes](enrichment/Upregulated%20enrichment%20GO%20Molecular%20Function.csv)
 
 ![upregulated_molecular_function](enrichment/upgene_molec_func.png)
 
