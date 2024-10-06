@@ -829,5 +829,4 @@ data.frame(
 
 ggsave('models_tumour_grades_types.png', dpi=300)
 
-
-
+rm(list=ls())
