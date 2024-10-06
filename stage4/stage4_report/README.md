@@ -35,6 +35,6 @@ __Feature Selection__
 
 __Modeling__
 
-The k-nearest neighbors (k-NN) (k=5) and random forest models were used to train a model for predicting IDH status. The model's performance was evaluated using accuracy, recall, F1 score, precision, and specificity.
+The k-nearest neighbors (k-NN) and random forest models were used to train a model for predicting IDH status. The model's performance was evaluated using accuracy, recall, F1 score, precision, and specificity. To select optimal parameters, hyperparameter tuning with a 5-fold cross-validation was used and the set of parameters with the highest accuracy was selected.
 
 
