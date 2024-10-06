@@ -49,7 +49,7 @@ Model        | Accuracy | Precision | Recall | F1 | Specificity
 KNN          |99.2	    |100        |99.04   |99.52| 100
 Random Forest|99.2	    |100        |99.04   |99.52| 100
 
-[!confmat_IDH](imgs/confmat_grade.png)
+![confmat_IDH](imgs/confmat_grade.png)
 
 __Figure 1:__ Confusion matrix on the test set (Tumour Grade)
 
@@ -64,12 +64,12 @@ KNN          |63.3	    |69.2       |56.3    |62.1 | 71.4
 Random Forest|66.6	    |62.8       |64.3    |63.5 | 66.7
 
 
-[!confmat_grade](imgs/confmat_grade.png)
+![confmat_grade](imgs/confmat_grade.png)
 
 __Figure 2:__ Confusion matrix on the test set (Tumour Grade)
 
 From Table 2 and Figure 2, both models have problems distinguishing both tumor grades. We further examined the number of samples in each tumor type that were correctly detected by the models in the test data. The result can be found in Figure 3.
 
-[!tumour_grade_type_vs_actual](imgs/models_tumour_grades_types.png)
+![tumour_grade_type_vs_actual](imgs/models_tumour_grades_types.png)
 
 __Figure 3:__ Models Predictions of Tumor types and Grades vs Actual values
