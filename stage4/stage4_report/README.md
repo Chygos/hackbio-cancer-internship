@@ -41,6 +41,6 @@ The k-nearest neighbors (k-NN) and random forest models were used to train a mod
 __Results__
 
 Model        | Accuracy | Precision | Recall | F1 | Specificity
--------------|---------:|----------:|-------:|---:|-----------:
+:------------|---------:|----------:|-------:|---:|-----------:
 KNN          |99.2	    |100        |99.04   |99.52| 100
 Random Forest|99.2	    |100        |99.04   |99.52| 100
