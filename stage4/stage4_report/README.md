@@ -50,7 +50,7 @@ Model        | Accuracy | Precision | Recall | F1 | Specificity
 KNN          |99.2	    |100        |99.04   |99.52| 100
 Random Forest|99.2	    |100        |99.04   |99.52| 100
 
-![confmat_IDH](imgs/confmat_grade.png)
+![confmat_IDH](imgs/confmat_IDH.png)
 
 __Figure 1:__ Confusion matrix on the test set (Tumour Grade)
 
@@ -76,20 +76,20 @@ __Figure 3:__ Models Predictions of Tumor types and Grades vs Actual values
 
 
 
-REFERENCES
+## **REFERENCES**
 
-Ceccarelli, Michele et al. 2016. “Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma.” Cell 164(3): 550–63.
+- Ceccarelli, Michele et al. 2016. “Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma.” Cell 164(3): 550–63.
 
-Chen, Ricky, Matthew Smith-Cohn, Adam L. Cohen, and Howard Colman. 2017. “Glioma Subclassifications and Their Clinical Significance.” Neurotherapeutics 14(2): 284–97.
+- Chen, Ricky, Matthew Smith-Cohn, Adam L. Cohen, and Howard Colman. 2017. “Glioma Subclassifications and Their Clinical Significance.” Neurotherapeutics 14(2): 284–97.
 
-Li, Yurong, Qin Qin, Yumeng Zhang, and Yuandong Cao. 2022. “Noninvasive Determination of the IDH Status of Gliomas Using MRI and MRI-Based Radiomics: Impact on Diagnosis and Prognosis.” Current Oncology 29(10): 6893–6907.
+- Li, Yurong, Qin Qin, Yumeng Zhang, and Yuandong Cao. 2022. “Noninvasive Determination of the IDH Status of Gliomas Using MRI and MRI-Based Radiomics: Impact on Diagnosis and Prognosis.” Current Oncology 29(10): 6893–6907.
 
-Louis, David N. et al. 2021. “The 2021 WHO Classification of Tumors of the Central Nervous System: A Summary.” Neuro-oncology 23(8): 1231–51. https://pubmed.ncbi.nlm.nih.gov/34185076/ (October 6, 2024).
+- Louis, David N. et al. 2021. “The 2021 WHO Classification of Tumors of the Central Nervous System: A Summary.” Neuro-oncology 23(8): 1231–51. https://pubmed.ncbi.nlm.nih.gov/34185076/ (October 6, 2024).
 
-Neumaier, Felix, Boris D. Zlatopolskiy, and Bernd Neumaier. 2023. “Mutated Isocitrate Dehydrogenase (MIDH) as Target for PET Imaging in Gliomas.” Molecules 28(7).
+- Neumaier, Felix, Boris D. Zlatopolskiy, and Bernd Neumaier. 2023. “Mutated Isocitrate Dehydrogenase (MIDH) as Target for PET Imaging in Gliomas.” Molecules 28(7).
 
-Rosati, Diletta et al. 2024. “Differential Gene Expression Analysis Pipelines and Bioinformatic Tools for the Identification of Specific Biomarkers: A Review.” Computational and Structural Biotechnology Journal 23(October 2023): 1154–68. https://doi.org/10.1016/j.csbj.2024.02.018.
+- Rosati, Diletta et al. 2024. “Differential Gene Expression Analysis Pipelines and Bioinformatic Tools for the Identification of Specific Biomarkers: A Review.” Computational and Structural Biotechnology Journal 23(October 2023): 1154–68. https://doi.org/10.1016/j.csbj.2024.02.018.
 
-Shaon, Md Shazzad Hossain, Tasmin Karim, Md Shahriar Shakil, and Md Zahid Hasan. 2024. “A Comparative Study of Machine Learning Models with LASSO and SHAP Feature Selection for Breast Cancer Prediction.” Healthcare Analytics 6(June).
+- Shaon, Md Shazzad Hossain, Tasmin Karim, Md Shahriar Shakil, and Md Zahid Hasan. 2024. “A Comparative Study of Machine Learning Models with LASSO and SHAP Feature Selection for Breast Cancer Prediction.” Healthcare Analytics 6(June).
 
-Yang, Keyang et al. 2022. “Glioma Targeted Therapy: Insight into Future of Molecular Approaches.” Molecular Cancer 21(1). https://doi.org/10.1186/s12943-022-01513-z.
+- Yang, Keyang et al. 2022. “Glioma Targeted Therapy: Insight into Future of Molecular Approaches.” Molecular Cancer 21(1). https://doi.org/10.1186/s12943-022-01513-z.
