@@ -31,14 +31,16 @@ The preprocessed dataset was split into train and test sets, with 75% for model 
 __Feature Selection__
 
 - __Filtering:__ Statistically insignificant genes from DGE analysis (FDR > 0.05) were removed reducing the features to about 24,000 genes.
-- __Lasso Logistic Regression:__ A Lasso regression model was used to select features by applying a penalty which shrank unimportant features to exactly zero. A total of 91 genes were selected for modeling based on non-zero coefficient values (Fig 6).
+- __Lasso Logistic Regression:__ A Lasso regression model was used to select features by applying a penalty which shrank unimportant features to exactly zero. A total of 91 genes were selected for modelling based on non-zero coefficient values (Fig 6).
 
 __Modeling__
 
-The k-nearest neighbors (k-NN) and random forest models were used to train a model for predicting IDH status. The model's performance was evaluated using accuracy, recall, F1 score, precision, and specificity. To select optimal parameters, hyperparameter tuning with a 5-fold cross-validation was used and the set of parameters with the highest accuracy was selected.
+The k-nearest neighbors (k-NN) and random forest models were used to train a model for predicting IDH status and tumor grades, respectively. The model's performance was evaluated using accuracy, recall, F1 score, precision, and specificity. To select optimal parameters, hyperparameter tuning with a 5-fold cross-validation was used and the set of parameters with the highest accuracy (IDH status) and F1 score (tumor grade) was selected. A confusion matrix representing each model's predictions on the test set and the actual class was visualized.
 
 
 __Results__
+
+A. **IDH Status**
 
 ___Table: Model Performance on test set___
 
@@ -46,3 +48,28 @@ Model        | Accuracy | Precision | Recall | F1 | Specificity
 :------------|---------:|----------:|-------:|---:|-----------:
 KNN          |99.2	    |100        |99.04   |99.52| 100
 Random Forest|99.2	    |100        |99.04   |99.52| 100
+
+[!confmat_IDH](imgs/confmat_grade.png)
+
+__Figure 1:__ Confusion matrix on the test set (Tumour Grade)
+
+
+B. **Tumor Grade**
+
+___Table: Model Performance on test set___
+
+Model        | Accuracy | Precision | Recall | F1  | Specificity
+:------------|---------:|----------:|-------:|----:|-----------:
+KNN          |63.3	    |69.2       |56.3    |62.1 | 71.4
+Random Forest|66.6	    |62.8       |64.3    |63.5 | 66.7
+
+
+[!confmat_grade](imgs/confmat_grade.png)
+
+__Figure 2:__ Confusion matrix on the test set (Tumour Grade)
+
+From Table 2 and Figure 2, both models have problems distinguishing both tumor grades. We further examined the number of samples in each tumor type that were correctly detected by the models in the test data. The result can be found in Figure 3.
+
+[!tumour_grade_type_vs_actual](imgs/models_tumour_grades_types.png)
+
+__Figure 3:__ Models Predictions of Tumor types and Grades vs Actual values
