@@ -31,6 +31,9 @@ We employed K-means clustering, which is an unsupervised machine learning algori
 
 
 __Figure 1:__ K-means Clusters
+
+
+
 The clustering algorithm has grouped samples based on their gene expression profiles, with a distinction in IDH status within the clusters. However, the overlap between clusters indicates that the algorithm did not distinctly separate the samples.  Additionally, samples from both the Mutant and Wild Type groups were present across all four clusters which shows that the clustering failed to classify Wild Type and Mutant samples as anticipated. This result contrasts with the findings from a related study.
 
 #### 2.3.34 **Machine Learning**
