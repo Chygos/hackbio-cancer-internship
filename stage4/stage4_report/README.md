@@ -104,6 +104,11 @@ __Figure 4:__ Models Predictions of Tumor types and Grades vs Actual values
 
 _Figure 5:_ IDH Upregulated Biological processes
 
+![IDH Upregulated Cellular Localisation](https://github.com/user-attachments/assets/40a82e49-2645-4e8a-9989-12c4f38739c1)
+
+
+_Figure 6:_ IDH Upregulated Cellular localisation
+
 ## **Conclusion**
 
 While the models used in this study performed exceptionally well in distinguishing IDH-mutant from IDH wild-type samples, achieving high accuracy, precision, and specificity, they struggled with accurately classifying tumor grades, highlighting challenges in differentiating between grade II and grade III gliomas. These results underscore the importance of IDH status in glioma classification and the potential for improving tumor grade prediction with further refinement of feature selection methods and model training. Continued research into the integration of molecular biomarkers, alongside advanced machine learning techniques, could enhance glioma diagnosis and prognosis.
