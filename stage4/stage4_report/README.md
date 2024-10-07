@@ -1,5 +1,17 @@
-**Classifying IDH Status of Lower-Grade Gliomas Using Gene Expression and a Machine Learning Approach**
- 
+## **Classifying IDH Status of Lower-Grade Gliomas Using Gene Expression Data and a Machine Learning Approach**
+
+## **Group Members:**
+
+●     Chigozie Nkwocha
+
+●     Chaima Ben Mohamed
+
+●     Charlotte Chinwendu Iwuji
+
+●     Opeyemi De Campos
+
+●     Reem Atawia
+
  ## 1. **Introduction to Gliomas, IDH Staus and their Significance**
 Gliomas are the most common primary tumors found in the brain and spinal cord (Chen et al. 2017). They account for about 80% of all brain tumors (Li et al. 2022). Diffuse gliomas are a type of brain tumor that originates from the glial cells, which support and protect neurons (Neumaier, Zlatopolskiy, and Neumaier 2023; Yang et al. 2022). Adult diffuse gliomas are classified and graded based on histological features, including subtypes such as oligodendroglioma, oligoastrocytoma, astrocytoma, and glioblastoma, ranging from grade II to IV (Ceccarelli et al. 2016).
 They are also usually classified based on the type of glial cells involved (e.g., astrocytes in astrocytomas) and their genetic mutations, particularly in the IDH gene(Louis et al. 2021). The IDH (Isocitrate Dehydrogenase) status is crucial for classifying diffuse gliomas, particularly astrocytomas and oligodendrogliomas. IDH mutations help distinguish glioma subtypes in the WHO classification, dividing tumors into IDH-mutant and IDH wild-type (Louis et al. 2021). Gliomas with IDH mutations generally have a better prognosis due to slower growth and improved survival. These mutations also produce an oncometabolite, altering cellular metabolism and driving tumorigenesis. Additionally, IDH mutations are potential therapeutic targets, with inhibitors being explored in clinical trials to offer new treatments (Louis et al. 2021).
@@ -88,7 +100,9 @@ From Table 2 and Figure 2, both models have problems distinguishing both tumor g
 
 __Figure 4:__ Models Predictions of Tumor types and Grades vs Actual values
 
+## **Conclusion**
 
+While the models used in this study performed exceptionally well in distinguishing IDH-mutant from IDH wild-type samples, achieving high accuracy, precision, and specificity, they struggled with accurately classifying tumor grades, highlighting challenges in differentiating between grade II and grade III gliomas. These results underscore the importance of IDH status in glioma classification and the potential for improving tumor grade prediction with further refinement of feature selection methods and model training. Continued research into the integration of molecular biomarkers, alongside advanced machine learning techniques, could enhance glioma diagnosis and prognosis.
 
 ## **REFERENCES**
 
