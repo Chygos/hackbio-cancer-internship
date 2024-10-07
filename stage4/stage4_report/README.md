@@ -84,7 +84,7 @@ From Table 2 and Figure 2, both models have problems distinguishing both tumor g
 
 ![tumour_grade_type_vs_actual](imgs/models_tumour_grades_types.png)
 
-__Figure 3:__ Models Predictions of Tumor types and Grades vs Actual values
+__Figure 4:__ Models Predictions of Tumor types and Grades vs Actual values
 
 
 
