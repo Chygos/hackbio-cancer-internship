@@ -27,11 +27,11 @@ We conducted pathway enrichment analysis to determine the biological roles of th
 #### 2.3.3 **K-Means Clustering**
 We employed K-means clustering, which is an unsupervised machine learning algorithm that generates clusters using the cluster’s object mean value (Ikotun et al., 2023).The algorithm generated 4 clusters to group the data into distinct clusters based on gene expression profiles. We cross-referred the identified clusters with the metadata to assess the IDH status (Wild Type or Mutant) of the corresponding samples.
 
-![Figure 1](
-
+![Figure 1](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/K-means%20Clustering.jpg?raw=true)
+__Figure 1:__ K-means Clusters
 The clustering algorithm has grouped samples based on their gene expression profiles, with a distinction in IDH status within the clusters. However, the overlap between clusters indicates that the algorithm did not distinctly separate the samples.  Additionally, samples from both the Mutant and Wild Type groups were present across all four clusters which shows that the clustering failed to classify Wild Type and Mutant samples as anticipated. This result contrasts with the findings from a related study.
 
-#### 2.3.3 **Machine Learning**
+#### 2.3.34 **Machine Learning**
 
 __Data Splitting__
 
@@ -59,7 +59,7 @@ Random Forest|99.2	    |100        |99.04   |99.52| 100
 
 ![confmat_IDH](imgs/confmat_IDH.png)
 
-__Figure 1:__ Confusion matrix on the test set (Tumour Grade)
+__Figure 2:__ Confusion matrix on the test set (Tumour Grade)
 
 
 ### 3.2 **Tumor Grade**
@@ -73,7 +73,7 @@ Random Forest|66.6	    |62.8       |64.3    |63.5 | 66.7
 
 ![confmat_grade](imgs/confmat_grade.png)
 
-__Figure 2:__ Confusion matrix on the test set (Tumour Grade)
+__Figure 3:__ Confusion matrix on the test set (Tumour Grade)
 
 From Table 2 and Figure 2, both models have problems distinguishing both tumor grades. We further examined the number of samples in each tumor type that were correctly detected by the models in the test data. The result can be found in Figure 3.
 
@@ -100,3 +100,4 @@ __Figure 3:__ Models Predictions of Tumor types and Grades vs Actual values
 - Shaon, Md Shazzad Hossain, Tasmin Karim, Md Shahriar Shakil, and Md Zahid Hasan. 2024. “A Comparative Study of Machine Learning Models with LASSO and SHAP Feature Selection for Breast Cancer Prediction.” Healthcare Analytics 6(June).
 
 - Yang, Keyang et al. 2022. “Glioma Targeted Therapy: Insight into Future of Molecular Approaches.” Molecular Cancer 21(1). https://doi.org/10.1186/s12943-022-01513-z.
+- Ikotun, A.M. et al. (2023) “K-means clustering algorithms: A comprehensive review, variants analysis, and advances in the era of big data,” Information sciences, 622, pp. 178–210. Available at: https://doi.org/10.1016/j.ins.2022.11.139.
