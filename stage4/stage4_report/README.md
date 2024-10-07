@@ -24,6 +24,13 @@ We performed DGE analysis using the likelihood ratio method, identifying differe
 #### 2.3.2 **Pathway Enrichment Analysis**
 We conducted pathway enrichment analysis to determine the biological roles of the upregulated and downregulated genes. This included analyzing the molecular functions, cellular localization, and biochemical pathways in which these genes are involved.
 
+#### 2.3.3 **K-Means Clustering**
+We employed K-means clustering, which is an unsupervised machine learning algorithm that generates clusters using the cluster’s object mean value (Ikotun et al., 2023).The algorithm generated 4 clusters to group the data into distinct clusters based on gene expression profiles. We cross-referred the identified clusters with the metadata to assess the IDH status (Wild Type or Mutant) of the corresponding samples.
+
+![Figure 1](
+
+The clustering algorithm has grouped samples based on their gene expression profiles, with a distinction in IDH status within the clusters. However, the overlap between clusters indicates that the algorithm did not distinctly separate the samples.  Additionally, samples from both the Mutant and Wild Type groups were present across all four clusters which shows that the clustering failed to classify Wild Type and Mutant samples as anticipated. This result contrasts with the findings from a related study.
+
 #### 2.3.3 **Machine Learning**
 
 __Data Splitting__
