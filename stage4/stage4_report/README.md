@@ -100,6 +100,10 @@ From Table 2 and Figure 2, both models have problems distinguishing both tumor g
 
 __Figure 4:__ Models Predictions of Tumor types and Grades vs Actual values
 
+### **Results for Gene Enrichment Analysis**
+
+The gene enrichment analysis of IDH-mutant genes revealed significant upregulation of immune-related biological processes, such as the **regulation of immune system processes** and **response to bacterial molecules**, highlighting the immune system's role in IDH mutation biology. In terms of cellular components, IDH-related proteins were enriched in the **extracellular space** and **plasma membrane**, suggesting their involvement in membrane signaling and extracellular interactions. The analysis also identified **oligosaccharide binding** and **ethanol binding** as key molecular functions. For downregulated IDH analysis, there were "no significant genes" for KEGG, Biological processes, Cellular components, and Molecular function.
+
 ![IDH Upregulated Biological Processes](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/IDH_BPP_UP.png?raw=true)
 
 _Figure 5:_ IDH Upregulated Biological processes
@@ -113,6 +117,13 @@ _Figure 6:_ IDH Upregulated Cellular localisation
 ![IDH Molecular Function](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/IDH_MFP_UP.png?raw=true)
 
 _Figure 7:_ IDH Upregulated Pathwway for Molecular Function
+
+
+![Upregulated genes for all pathways](https://github.com/user-attachments/assets/66b2d2a6-83d2-4c0f-ae16-45e3faf52de4)
+
+
+_Figure_ 8: Upregulated genes for all Pathways
+
 ## **Conclusion**
 
 While the models used in this study performed exceptionally well in distinguishing IDH-mutant from IDH wild-type samples, achieving high accuracy, precision, and specificity, they struggled with accurately classifying tumor grades, highlighting challenges in differentiating between grade II and grade III gliomas. These results underscore the importance of IDH status in glioma classification and the potential for improving tumor grade prediction with further refinement of feature selection methods and model training. Continued research into the integration of molecular biomarkers, alongside advanced machine learning techniques, could enhance glioma diagnosis and prognosis.
