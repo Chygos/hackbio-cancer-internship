@@ -88,7 +88,7 @@ Random Forest|63.72	    |60.34      |66.72    |63.06 | 61.67
 
 __Figure 3:__ Confusion matrix on the test set (Tumour Grade)
 
-From Table 2 and Figure 2, both models have problems distinguishing both tumor grades. We further examined the number of samples in each tumor type that were correctly detected by the models in the test data. The result can be found in Figure 3.
+From Table 2 and Figure 3, both models have problems distinguishing both tumor grades. We further examined the number of samples in each tumor type that the models in the test data correctly detected. The result can be found in Figure 4. Both models had problems differentiating tumor grades in the oligodendroglioma tumor type than in any other tumor type.
 
 ![tumour_grade_type_vs_actual](imgs/models_tumour_grades_types.png)
 
