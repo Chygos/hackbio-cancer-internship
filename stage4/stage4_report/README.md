@@ -34,13 +34,12 @@ We performed DGE analysis using the likelihood ratio method, identifying differe
 We conducted pathway enrichment analysis to determine the biological roles of the upregulated and downregulated genes. This included analyzing the molecular functions, cellular localization, and biochemical pathways in which these genes are involved.
 
 #### 2.3.3 **K-Means Clustering**
-We employed K-means clustering, which is an unsupervised machine learning algorithm that generates clusters using the cluster’s object mean value (Ikotun et al., 2023).The algorithm generated 4 clusters to group the data into distinct clusters based on gene expression profiles. We cross-referred the identified clusters with the metadata to assess the IDH status (Wild Type or Mutant) of the corresponding samples.
+We employed K-means clustering, which is an unsupervised machine learning algorithm that generates clusters using the cluster’s object mean value (Ikotun et al., 2023). The algorithm generated 4 clusters to group the data into distinct clusters based on gene expression profiles. We cross-referred the identified clusters with the metadata to assess the corresponding samples' IDH status (Wild Type or Mutant).
 
 ![Figure 1](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/K-means%20Clustering.jpg?raw=true)
 
 
 __Figure 1:__ K-means Clusters
-
 
 
 The clustering algorithm has grouped samples based on their gene expression profiles, with a distinction in IDH status within the clusters. However, the overlap between clusters indicates that the algorithm did not distinctly separate the samples.  Additionally, samples from both the Mutant and Wild Type groups were present across all four clusters which shows that the clustering failed to classify Wild Type and Mutant samples as anticipated. This result contrasts with the findings from a related study.
@@ -64,7 +63,7 @@ The k-nearest neighbors (k-NN) and random forest models were used to train a mod
 
 ### 3.1 **IDH Status**
 
-___Table: Model Performance on test set___
+___Table 1: Model Performance on test set___
 
 Model        | Accuracy | Precision | Recall | F1  | Specificity
 :------------|---------:|----------:|-------:|----:|-----------:
@@ -77,7 +76,7 @@ __Figure 2:__ Confusion matrix on the test set (Tumour Grade)
 
 
 ### 3.2 **Tumor Grade**
-___Table: Model Performance on test set___
+___Table 2: Model Performance on test set___
 
 Model        | Accuracy | Precision | Recall  | F1   | Specificity
 :------------|---------:|----------:|--------:|-----:|-----------:
@@ -101,23 +100,22 @@ The gene enrichment analysis of IDH-mutant genes revealed significant upregulati
 
 ![IDH Upregulated Biological Processes](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/IDH_BPP_UP.png?raw=true)
 
-_Figure 5:_ IDH Upregulated Biological processes
+__Figure 5:__ IDH Upregulated Biological processes
 
 ![IDH Upregulated Cellular Localisation](https://github.com/user-attachments/assets/40a82e49-2645-4e8a-9989-12c4f38739c1)
 
 
-_Figure 6:_ IDH Upregulated Cellular localisation
+__Figure 6:__ IDH Upregulated Cellular localisation
 
 
 ![IDH Molecular Function](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/IDH_MFP_UP.png?raw=true)
 
-_Figure 7:_ IDH Upregulated Pathwway for Molecular Function
+__Figure 7__ IDH Upregulated Pathwway for Molecular Function
 
 
 ![Upregulated genes for all pathways](https://github.com/user-attachments/assets/66b2d2a6-83d2-4c0f-ae16-45e3faf52de4)
 
-
-_Figure_ 8: Upregulated genes for all Pathways
+__Figure 8__: Upregulated genes for all Pathways
 
 ## **Conclusion**
 
