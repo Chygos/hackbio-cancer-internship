@@ -251,7 +251,7 @@ rm(list=ls())
 
 #################### Machine Learning ##############################
 
-### For IDH status
+########## For IDH status #############
 suppressPackageStartupMessages(library(tidyverse))
 suppressMessages(library(kknn))
 suppressPackageStartupMessages(library(glmnet))
@@ -536,7 +536,7 @@ rf_importance |>
             by='features') |>
   replace_na(list(gene_name = 'unknown gene')) |>
   slice_max(Mutant, n=20) |>
-  ggplot(aes(y=reorder(features, Mutant), x=Mutant)) +
+  ggplot(aes(y=reorder(gene_name, Mutant), x=Mutant)) +
   geom_col(fill='firebrick', alpha=0.6) +
   theme_classic() +
   theme(panel.grid = element_blank(), 
@@ -562,7 +562,7 @@ ggpubr::ggarrange(confusion_matrix_plot(knn_predictions, ytest,
 ggsave('confmat_IDH.png', dpi=300)
 
 
-### Tumor Grade
+####### Tumor Grade ########
 
 dea_results_grade <- read.csv('DE_result_tumor_grade.csv', row.names=1)
 
@@ -637,6 +637,7 @@ test.data <- prep_data[-data.splits,]
 
 xtrain <- train.data |> 
   select(-tumor_grade, -tumor_type)
+
 xtest <- test.data |> 
   select(-tumor_grade, -tumor_type)
 
@@ -681,7 +682,7 @@ selected_features_df <- as.data.frame(as.matrix(coefficients(lasso))) |>
 selected_features_df %>%
   mutate(s0 = abs(s0)) |>
   slice_max(s0, n=20) |>
-  ggplot(aes(y=reorder(features, s0), x=s0)) +
+  ggplot(aes(y=reorder(gene_name, s0), x=s0)) +
   geom_col(fill='firebrick', alpha=0.6) +
   geom_text(aes(label=round(odds_ratio,2)), hjust = 1.2, size=3.2, 
             fontface='bold', color='white', vjust=.2) +
@@ -728,8 +729,8 @@ table(Predictions=knn_predictions,
 
 # Model performance
 model_performance(knn.model, 
-                  select(scaled_train, selected_features), 
-                  y=ytrain, positive='G3')
+                  select(scaled_test, selected_features), 
+                  y=ytest, positive='G3')
 
 
 ## Random Forest
@@ -762,7 +763,7 @@ rf_importance |>
             by='features') |>
   replace_na(list(gene_name = 'unknown gene')) |>
   slice_max(G3, n=20) |>
-  ggplot(aes(y=reorder(features, G3), x=G3)) +
+  ggplot(aes(y=reorder(gene_name, G3), x=G3)) +
   geom_col(fill='firebrick', alpha=0.6) +
   theme_classic() +
   theme(panel.grid = element_blank(), 
@@ -796,15 +797,16 @@ ggpubr::ggarrange(confusion_matrix_plot(knn_predictions,
                                         ytest, 
                                         'Confusion Matrix (Random Forest)')
 )
+
 ggsave('confmat_grade.png', dpi=300)
 
 # visualise model performance on tumor type and grade
 data.frame(
   models = factor(c('knn', 'knn', 'rf', 'rf', 'actual', 'actual')),
   tumor_grades = factor(c('G2', 'G3', 'G2', 'G3', 'G2', 'G3')),
-  astrocytoma = c(14, 25, 12,27,13,26),
-  oligoastrocytoma = c(15, 3, 12, 6,12,6),
-  oligodendroglioma = c(22, 11, 19, 14,17,16)
+  astrocytoma = c(19, 27, 15,31,18,28),
+  oligoastrocytoma = c(17, 9, 17, 9,15,11),
+  oligodendroglioma = c(30, 11, 26, 15,20,21)
 ) |>
   pivot_longer(c(-models, -tumor_grades), 
                names_to = 'tumor_type', 
@@ -824,9 +826,10 @@ data.frame(
         axis.ticks.y=element_blank()) +
   scale_x_discrete(labels=c('Actual', 'KNN', 'RF')) +
   labs(title='Model Predictions by Tumor Grades and Types vs Actual values', 
-       x='', y='Predictions', fill='Tumor Grades') +
-  scale_fill_manual(values=c('steelblue', 'firebrick'))
+       x='', y='Predictions', fill='Tumor Grade') +
+  scale_fill_manual(values=c('steelblue', 'lightcoral'))
 
 ggsave('models_tumour_grades_types.png', dpi=300)
 
 rm(list=ls())
+
