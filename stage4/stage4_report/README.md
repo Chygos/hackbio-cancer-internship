@@ -1,6 +1,6 @@
 ## **Classifying IDH Status of Lower-Grade Gliomas Using Gene Expression Data and a Machine Learning Approach**
 
-> ## **Group Members:**
+> ## **Group Members**
 > Chigozie Nkwocha \
 > Chaima Ben Mohamed \
 > Charlotte Chinwendu Iwuji \
