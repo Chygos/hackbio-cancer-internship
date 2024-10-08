@@ -71,10 +71,10 @@ The k-nearest neighbors (k-NN) and random forest models were used to train a mod
 
 ___Table: Model Performance on test set___
 
-Model        | Accuracy | Precision | Recall | F1 | Specificity
-:------------|---------:|----------:|-------:|---:|-----------:
-KNN          |99.2	    |100        |99.04   |99.52| 100
-Random Forest|99.2	    |100        |99.04   |99.52| 100
+Model        | Accuracy | Precision | Recall | F1  | Specificity
+:------------|---------:|----------:|-------:|----:|-----------:
+KNN          |99.2	     |100        |99.04   |99.52| 100
+Random Forest|99.2	     |100        |99.04   |99.52| 100
 
 ![confmat_IDH](imgs/confmat_IDH.png)
 
@@ -84,10 +84,10 @@ __Figure 2:__ Confusion matrix on the test set (Tumour Grade)
 ### 3.2 **Tumor Grade**
 ___Table: Model Performance on test set___
 
-Model        | Accuracy | Precision | Recall | F1  | Specificity
-:------------|---------:|----------:|-------:|----:|-----------:
-KNN          |63.3	    |69.2       |56.3    |62.1 | 71.4
-Random Forest|66.6	    |62.8       |64.3    |63.5 | 66.7
+Model        | Accuracy | Precision | Recall  | F1   | Specificity
+:------------|---------:|----------:|--------:|-----:|-----------:
+KNN          |61.95	    |68.09      |53.33    |59.81 | 71.70
+Random Forest|63.72	    |60.34      |66.72    |63.06 | 61.67
 
 
 ![confmat_grade](imgs/confmat_grade.png)
