@@ -467,8 +467,7 @@ confusion_matrix_plot <- function(predictions, actual,
           legend.position = 'none',
           axis.text.y = element_text(angle=90, hjust=0.5),
           plot.title = element_text(face='bold')) +
-    labs(title = title, y='Actual', x='Predictions') +
-    coord_equal(clip='off', ratio=0.8)
+    labs(title = title, y='Actual', x='Predictions')
 }
 
 
@@ -696,8 +695,8 @@ ggsave('lasso_features_grade.png', bg='white')
 
 
 
-# kNN
 selected_features <- selected_features_df$features
+# kNN
 
 set.seed(5)
 tune_parameters(xtrain, ytrain, 
@@ -816,7 +815,7 @@ data.frame(
   geom_text(aes(label=predictions), 
             size=3.3,
             position=position_stack(0.5)) +
-  facet_grid(~tumor_type) +
+  facet_grid(~tumor_type, labeller = as_labeller(function(x) str_to_title(x))) +
   theme_bw() +
   theme(panel.grid=element_blank(),
         plot.title = element_text(face='bold', size=12),
@@ -827,7 +826,7 @@ data.frame(
   scale_x_discrete(labels=c('Actual', 'KNN', 'RF')) +
   labs(title='Model Predictions by Tumor Grades and Types vs Actual values', 
        x='', y='Predictions', fill='Tumor Grade') +
-  scale_fill_manual(values=c('steelblue', 'lightcoral'))
+  scale_fill_manual(values=c('cornflowerblue', 'lightcoral'))
 
 ggsave('models_tumour_grades_types.png', dpi=300)
 
