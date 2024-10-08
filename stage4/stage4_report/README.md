@@ -1,16 +1,11 @@
 ## **Classifying IDH Status of Lower-Grade Gliomas Using Gene Expression Data and a Machine Learning Approach**
 
-## **Group Members:**
-
-●     Chigozie Nkwocha
-
-●     Chaima Ben Mohamed
-
-●     Charlotte Chinwendu Iwuji
-
-●     Opeyemi De Campos
-
-●     Reem Atawia
+> ## **Group Members:**
+> Chigozie Nkwocha
+> Chaima Ben Mohamed
+> Charlotte Chinwendu Iwuji
+> Opeyemi De Campos
+> Reem Atawia
 
  ## 1. **Introduction to Gliomas, IDH Staus and their Significance**
 Gliomas are the most common primary tumors found in the brain and spinal cord (Chen et al. 2017). They account for about 80% of all brain tumors (Li et al. 2022). Diffuse gliomas are a type of brain tumor that originates from the glial cells, which support and protect neurons (Neumaier, Zlatopolskiy, and Neumaier 2023; Yang et al. 2022). Adult diffuse gliomas are classified and graded based on histological features, including subtypes such as oligodendroglioma, oligoastrocytoma, astrocytoma, and glioblastoma, ranging from grade II to IV (Ceccarelli et al. 2016).
