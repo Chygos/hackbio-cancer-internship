@@ -38,9 +38,7 @@ We employed K-means clustering, which is an unsupervised machine learning algori
 
 ![Figure 1](https://github.com/Chygos/hackbio-cancer-internship/blob/main/stage4/stage4_report/imgs/K-means%20Clustering.jpg?raw=true)
 
-
 __Figure 1:__ K-means Clusters
-
 
 The clustering algorithm has grouped samples based on their gene expression profiles, with a distinction in IDH status within the clusters. However, the overlap between clusters indicates that the algorithm did not distinctly separate the samples.  Additionally, samples from both the Mutant and Wild Type groups were present across all four clusters which shows that the clustering failed to classify Wild Type and Mutant samples as anticipated. This result contrasts with the findings from a related study.
 
@@ -53,7 +51,7 @@ The preprocessed dataset was split into train and test sets, with 75% for model 
 __Feature Selection__
 
 - __Filtering:__ Statistically insignificant genes from DGE analysis (FDR > 0.05) were removed reducing the features to about 24,000 genes.
-- __Lasso Logistic Regression:__ A Lasso regression model was used to select features by applying a penalty which shrank unimportant features to exactly zero. A total of 91 genes were selected for modelling based on non-zero coefficient values (Fig 6).
+- __Lasso Logistic Regression:__ A Lasso regression model was used to select features by applying a penalty which shrank unimportant features to exactly zero. Genes with non-zero coefficient values were selected for modelling.
 
 __Modeling__
 
@@ -74,6 +72,7 @@ Random Forest|99.2	     |100        |99.04   |99.52| 100
 
 __Figure 2:__ Confusion matrix on the test set (Tumour Grade)
 
+From Figure 2, both models could almost perfectly predict IDH status based on a set of genes.
 
 ### 3.2 **Tumor Grade**
 ___Table 2: Model Performance on test set___
